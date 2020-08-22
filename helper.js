@@ -1,5 +1,11 @@
 import { GLTFLoader } from "./three/examples/jsm/loaders/GLTFLoader.js";
-const loader = new GLTFLoader();
+import { LoadingManager } from "./three/build/three.module.js";
+
+const loadingScreen = document.getElementById("loadingScreen")
+const loadingManager = new LoadingManager(() => {
+    loadingScreen.style.display = "none";
+});
+const loader = new GLTFLoader(loadingManager);
 
 export const toRad = (degree) => (degree * Math.PI / 180);
 
@@ -17,6 +23,7 @@ export function dumpObject(obj, lines = [], isLast = true, prefix = '') {
 
 export function loadModel(url) {
     return new Promise((resolve, reject) => {
+        loadingScreen.style.display = "flex";
         loader.load(url, data => resolve(data), null, err => reject(err));
     });
 }

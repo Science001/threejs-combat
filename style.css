@@ -2,8 +2,8 @@
 body {
     margin: 0;
     overflow: hidden;
-    background: url("https://www.wallpaperflare.com/static/755/594/343/firewatch-video-games-landscape-pine-wallpaper.jpg");
-    background-repeat: no-repeat;
+    background: url("https://www.xmple.com/wallpaper/blue-gradient-yellow-linear-1920x1080-c2-87cefa-f0e68c-a-270-f-14.svg");
+    background-size: cover;
     font-family: 'Alata', sans-serif;
 }
 
@@ -17,4 +17,33 @@ body {
     text-align: center;
     width: 100%;
     margin: 30px 0;
+}
+
+#loadingScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+#spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 50px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
