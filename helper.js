@@ -8,10 +8,13 @@ const loadingScreen = document.getElementById("loadingScreen");
 const loaderHeading = document.getElementById("loaderHeading");
 const startBtn = document.getElementById("startBtn");
 const spinner = document.getElementById("spinner");
+let loadedTimer;
 const loadingManager = new LoadingManager(() => {
-    startBtn.style.display = "block";
-    spinner.style.display = "none";
-    loaderHeading.innerHTML = "All set for the epic battle"
+    loadedTimer = setTimeout(() => {
+        startBtn.style.display = "block";
+        spinner.style.display = "none";
+        loaderHeading.innerHTML = "All set for the epic battle"
+    }, 1000);
 });
 const loader = new GLTFLoader(loadingManager);
 
@@ -38,6 +41,7 @@ export function dumpObject(obj, lines = [], isLast = true, prefix = '') {
 export function loadModel(url) {
     return new Promise((resolve, reject) => {
         loadingScreen.style.display = "flex";
+        clearTimeout(loadedTimer);
         loader.load(url, data => resolve(data), null, err => reject(err));
     });
 }
