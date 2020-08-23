@@ -3,7 +3,6 @@ body {
     margin: 0;
     overflow: hidden;
     background: url("https://www.xmple.com/wallpaper/blue-gradient-yellow-linear-1920x1080-c2-87cefa-f0e68c-a-270-f-14.svg");
-    background-size: cover;
     font-family: 'Alata', sans-serif;
 }
 
@@ -17,6 +16,7 @@ body {
     text-align: center;
     width: 100%;
     margin: 30px 0;
+    user-select: none;
 }
 
 #loadingScreen {
@@ -46,4 +46,27 @@ body {
     100% {
         transform: rotate(360deg);
     }
+}
+
+#modal {
+    margin: 50px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 0 0 20px 0 gray;
+}
+
+#modal h1 {
+    margin-top: 0;
+}
+
+#modal a {
+    display: none;
+    text-decoration: none;
+    color: white;
+    background-color: #6814b5;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px;
 }

@@ -10,12 +10,26 @@
 
 <body>
     <div id="loadingScreen">
-        <h1>Loading your experience</h1>
+        <h1 id="loaderHeading">Setting up the arena</h1>
         <div id="spinner"></div>
+        <div id="modal">
+            <h1>Instructions</h1>
+            <p>Click to hit the monster</p>
+            <p>Double Click to dodge monster attacks</p>
+            <p>Take out all of monster's health to win</p>
+            <a href="#" id="startBtn">Continue</a>
+        </div>
     </div>
     <div id="scene"></div>
     <div class="container">
-        <h1>Click to fight</h1>
+        <h1 id="message">Click to attack</h1>
+        <div id="livesBox">
+            <span id="nextTime">Monster will attack anytime now</span><br /><br />
+            <span>Hero:</span>
+            <span id="heroLives"></span><br />
+            <span>Monster: </span>
+            <span id="monsterLives"></span>
+        </div>
     </div>
     <script type="module" src="./app.js"></script>
     <script type="module" src="./helper.js"></script>
