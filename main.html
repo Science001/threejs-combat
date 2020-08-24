@@ -14,18 +14,19 @@
         <div id="spinner"></div>
         <div id="modal">
             <h1>Instructions</h1>
-            <p>Click to hit the monster</p>
-            <p>Double Click to dodge monster attacks</p>
             <p>Take out all of monster's health to win</p>
-            <p style="color: red;">Chrome Android doesn't support dodging</p>
+            <h3>🤛 Attack 🤜</h3>
+            <pre><p id="hitInstruction"></p></pre>
+            <h3>🏃‍♂️ Dodge 🦆</h3>
+            <pre><p id="dodgeInstruction"></p></pre>
             <a href="#" id="startBtn">Continue</a>
         </div>
     </div>
     <div id="scene"></div>
     <div class="container">
         <h1 id="message">Click to attack</h1>
+        <span id="nextTime">Monster will attack anytime now</span><br /><br />
         <div id="livesBox">
-            <span id="nextTime">Monster will attack anytime now</span><br /><br />
             <span>Hero:</span>
             <span id="heroLives"></span><br />
             <span>Monster: </span>

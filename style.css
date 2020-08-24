@@ -4,6 +4,7 @@ body {
     overflow: hidden;
     background: url("https://www.xmple.com/wallpaper/blue-gradient-yellow-linear-1920x1080-c2-87cefa-f0e68c-a-270-f-14.svg");
     font-family: 'Alata', sans-serif;
+    overscroll-behavior-y: contain;
 }
 
 #scene, canvas {
