@@ -3,6 +3,8 @@ import { LoadingManager } from "./three/build/three.module.js";
 
 export let gameStart = false;
 export let gameOver = false;
+export const HERO_LIVES = 5;
+export const MONSTER_LIVES = 15;
 
 const loadingScreen = document.getElementById("loadingScreen");
 const loaderHeading = document.getElementById("loaderHeading");
@@ -52,8 +54,8 @@ const nextTimeBox = document.getElementById("nextTime");
 const livesBox = document.getElementById("livesBox");
 const heroLivesBox = document.getElementById("heroLives");
 const monsterLivesBox = document.getElementById("monsterLives");
-export let heroLives = 5;
-export let monsterLives = 8;
+export let heroLives = HERO_LIVES;
+export let monsterLives = MONSTER_LIVES;
 heroLivesBox.innerHTML = heroLives;
 monsterLivesBox.innerHTML = monsterLives;
 

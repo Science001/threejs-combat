@@ -31,13 +31,9 @@ body {
 }
 
 #spinner {
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #3498db;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
     animation: spin 1s linear infinite;
-    margin: 50px;
+    margin: 25px auto;
+    font-size: 40px;
 }
 
 @keyframes spin {
@@ -70,4 +66,26 @@ body {
     border-radius: 5px;
     margin-top: 20px;
     padding: 10px;
+}
+
+#livesBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.lifeBox {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.lifeBox div {
+    padding: 20px 30px;
+    background-color: #ffdfa5;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }

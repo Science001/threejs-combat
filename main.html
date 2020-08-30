@@ -11,7 +11,7 @@
 <body>
     <div id="loadingScreen">
         <h1 id="loaderHeading">Setting up the arena</h1>
-        <div id="spinner"></div>
+        <div id="spinner">|</div>
         <div id="modal">
             <h1>Instructions</h1>
             <p>Take out all of monster's health to win</p>
@@ -27,10 +27,14 @@
         <h1 id="message">Click to attack</h1>
         <span id="nextTime">Monster will attack anytime now</span><br /><br />
         <div id="livesBox">
-            <span>Hero:</span>
-            <span id="heroLives"></span><br />
-            <span>Monster: </span>
-            <span id="monsterLives"></span>
+            <div class="lifeBox">
+                <div id="heroLives"></div>
+                <span>Hero</span>
+            </div>
+            <div class="lifeBox">
+                <div id="monsterLives"></div>
+                <span>Monster</span>
+            </div>
         </div>
     </div>
     <script type="module" src="./app.js"></script>
