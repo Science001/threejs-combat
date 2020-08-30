@@ -129,7 +129,7 @@ async function main() {
                 nextTime -= 1;
             }, 1000);
         }
-    }, 3000);
+    }, 3010);
 
     function monsterDie() {
         const fadeInTime = 0.5;
