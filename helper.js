@@ -73,7 +73,7 @@ export function updateLives(hero, monster, message) {
 
     if (!heroLives || !monsterLives) {
         livesBox.style.display = "none";
-        nextTimeBox.style.display = "none";
+        nextTimeBox.innerHTML = "Refresh page to play again";
         gameOver = true;
     }
     if (!heroLives && !monsterLives) {
